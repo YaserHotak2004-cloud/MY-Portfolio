@@ -3,15 +3,23 @@
 @import "tailwindcss";
 
 @theme {
-  --color-sapphire: #011e4a;
-  --color-ocean: #2afff4;
-  --color-jade: #2eff58;
+  /* Portfolio Color Palette */
+  --color-midnight: #181a2f;
+  --color-navy: #242e49;
+  --color-slate: #37415c;
+  --color-crimson: #b4182d;
+  --color-burgundy: #54162b;
+  --color-peach: #fda481;
 }
 
+/* Global Styles */
 body {
   font-family: "Inter", sans-serif;
+  background-color: var(--color-midnight);
+  color: white;
 }
 
+/* Custom Fonts */
 .font-agrave {
   font-family: "Agrave Pro", sans-serif;
 }

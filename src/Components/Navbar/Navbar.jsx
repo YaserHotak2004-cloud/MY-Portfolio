@@ -110,29 +110,31 @@ export default function Navbar() {
     { name: "Project", path: "/Project", icon: "fa-folder-open" },
     { name: "Contact", path: "/Contact", icon: "fa-envelope" },
   ];
+
   const [menuopen, setmenuopen] = useState(false);
+
   return (
     <>
       {/* Mobile Header */}
-      <header className="fixed top-0 left-0 z-50 flex h-16 w-full items-center justify-between bg-[#080D18] px-5 md:hidden">
+      <header className="fixed top-0 left-0 z-50 flex h-16 w-full items-center justify-between bg-midnight px-5 md:hidden">
         {/* Profile / Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img
             src={mypic}
             alt="Yaser Profile"
-            className="h-10 w-10 rounded-full border-2 border-jade"
+            className="h-10 w-10 rounded-full border-2 border-peach"
           />
 
-          <h1 className="text-xl font-bold text-jade">
+          <h1 className="text-xl font-bold text-peach">
             Yaser
-            <span className="ml-1 text-sm italic text-ocean">MORTAZA</span>
+            <span className="ml-1 text-sm italic text-crimson">MORTAZA</span>
           </h1>
         </Link>
 
         {/* Hamburger Button */}
         <button
           onClick={() => setmenuopen(!menuopen)}
-          className="text-2xl text-ocean"
+          className="text-2xl text-peach"
         >
           <i className={`fa-solid ${menuopen ? "fa-xmark" : "fa-bars"}`}></i>
         </button>
@@ -140,7 +142,7 @@ export default function Navbar() {
 
       <aside
         className={`fixed left-0 top-0 z-50 h-screen w-64
-  bg-[#080D18] p-5 transition-transform duration-300
+  bg-navy p-5 transition-transform duration-300
   ${menuopen ? "translate-x-0" : "-translate-x-full"}
   md:translate-x-0`}
       >
@@ -150,12 +152,12 @@ export default function Navbar() {
             <img
               src={mypic}
               alt="Yaser Profile"
-              className="h-12 w-12 rounded-full border-2 border-jade object-cover shadow-lg shadow-jade/20 transition-transform duration-300 group-hover:scale-110"
+              className="h-12 w-12 rounded-full border-2 border-peach object-cover shadow-lg shadow-peach/20 transition-transform duration-300 group-hover:scale-110"
             />
 
-            <h1 className="font-inter text-2xl font-extrabold text-jade">
+            <h1 className="font-inter text-2xl font-extrabold text-peach">
               Yaser
-              <span className="ml-1 font-agrave text-[14px] italic text-ocean">
+              <span className="ml-1 font-agrave text-[14px] italic text-crimson">
                 MORTAZA
               </span>
             </h1>
@@ -172,8 +174,8 @@ export default function Navbar() {
                   to={item.path}
                   className={`group flex items-center gap-3 rounded-xl p-3 text-[13px] transition-all duration-300 ${
                     isActive
-                      ? "bg-gradient-to-l from-sapphire/40 to-ocean/20 text-jade shadow-md shadow-sapphire/20"
-                      : "text-ocean hover:bg-ocean/10 hover:pl-5 hover:text-jade"
+                      ? "bg-gradient-to-l from-burgundy/40 to-crimson/20 text-peach shadow-md shadow-burgundy/20"
+                      : "text-peach hover:bg-crimson/10 hover:pl-5 hover:text-white"
                   }`}
                 >
                   <i
@@ -183,7 +185,7 @@ export default function Navbar() {
                   <span className="font-inter font-medium">{item.name}</span>
 
                   {isActive && (
-                    <span className="ml-auto h-2 w-2 rounded-full bg-jade shadow-[0_0_10px_#00e5a8]"></span>
+                    <span className="ml-auto h-2 w-2 rounded-full bg-peach shadow-[0_0_10px_#FDA481]"></span>
                   )}
                 </Link>
               );
@@ -192,8 +194,8 @@ export default function Navbar() {
         </div>
 
         {/* Video and Social Links */}
-        <div className="border-t border-ocean/20 pt-5">
-          <div className="mb-5 hidden overflow-hidden rounded-xl border border-ocean/20 shadow-lg shadow-sapphire/20 min-[481px]:block">
+        <div className="border-t border-slate/20 pt-5">
+          <div className="mb-5 hidden overflow-hidden rounded-xl border border-slate/20 shadow-lg shadow-burgundy/20 min-[481px]:block">
             <video
               src={portVideo}
               autoPlay
@@ -204,7 +206,7 @@ export default function Navbar() {
             />
           </div>
 
-          <p className="mb-4 font-inter text-sm font-semibold tracking-wide text-ocean">
+          <p className="mb-4 font-inter text-sm font-semibold tracking-wide text-peach">
             Follow Me
           </p>
 
@@ -213,7 +215,7 @@ export default function Navbar() {
               href="https://www.facebook.com/profile.php?id=61591192395276"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 text-ocean transition-all duration-300 hover:translate-x-2 hover:text-jade"
+              className="flex items-center gap-3 text-peach transition-all duration-300 hover:translate-x-2 hover:text-white"
             >
               <i className="fa-brands fa-facebook text-lg"></i>
               <span className="font-inter text-xs">Facebook</span>
@@ -223,7 +225,7 @@ export default function Navbar() {
               href="https://github.com/YaserHotak2004-cloud"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 text-ocean transition-all duration-300 hover:translate-x-2 hover:text-jade"
+              className="flex items-center gap-3 text-peach transition-all duration-300 hover:translate-x-2 hover:text-white"
             >
               <i className="fa-brands fa-github text-lg"></i>
               <span className="font-inter text-xs">GitHub</span>
@@ -231,7 +233,6 @@ export default function Navbar() {
           </div>
         </div>
       </aside>
-      
     </>
   );
 }
