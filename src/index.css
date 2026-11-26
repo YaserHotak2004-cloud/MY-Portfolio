@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-sapphire: #011e4a;
+  --color-ocean: #2afff4;
+  --color-jade: #2eff58;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.font-agrave {
+  font-family: "Agrave Pro", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
